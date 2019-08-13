@@ -16,7 +16,7 @@ int main(){
 	else if(b > a && b > c){
 		aux = a;
 		a = b;
-		b = a;
+		b = aux;
 		if(b < c){
 			aux = b;
 			b = c;
@@ -26,19 +26,20 @@ int main(){
 	else if(c > a && c > b){
 		aux = a;
 		a = c;
-		c = a;
+		c = aux;
 		if(b < c){
 			aux = b;
 			b = c;
 			c = aux;
 		}
 	}
-	printf("%d\n", a);
-	printf("%d\n", b);
 	printf("%d\n", c);
+	printf("%d\n", b);
+	printf("%d\n", a);
 	printf("\n");
 	printf("%d\n", v1);
 	printf("%d\n", v2);
 	printf("%d\n", v3);
 	
+	return 0;
 }
